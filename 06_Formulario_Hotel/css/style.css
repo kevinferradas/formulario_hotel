@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3rem;
+}
+main {
+    max-width: 480px;
+    margin: 3rem auto;
+}
+section{
+    width: 100%;
+}
+
+
+input {
+    border-radius: 5px;
+    padding: .5rem;
+    text-align: left;
+  
+}
+
+.personales{
+
+    input{
+        width: 100%;   
+    }
+
+    div {
+        margin-top: 1rem;
+    }
+    p {
+        font-size: .8rem;
+        color:red;
+        height: 1.5rem;
+    }
+} 
+
+
+
+fieldset {
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.reserva{
+    display:flex;
+    gap: .6rem;
+
+    div {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+input[type="radio"]{
+    accent-color: darkgreen;
+    display: inline;
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+input[type="radio"]:checked + label {
+    color:darkgreen;
+}
+
+input:focus {
+    background-color: #f2c564b4;
+}
+
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+    
+    button{
+        padding:10px 20px;
+        border-radius: 5%;
+    }
+
+    .reservar {
+        background-color: darkgreen;
+        color:white;
+    }
+
+    .cancelar {
+        background-color: pink;
+    }
+    
+}
+
+.reservar:hover , .cancelar:hover {
+    cursor:pointer;
+}
+
+dialog {
+    width: 80%;
+    margin: auto;
+    background-color: ivory;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2rem;
+    text-align: center;
+
+    h2 {
+        border-bottom: 2px solid black;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin:1rem 0;
+        color:gray;
+        text-align: left;
+
+    }
+
+    .textoPrincipal {
+        color:black;
+    }
+    form {
+        border-top: 2px solid black;
+        margin-top: 3rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin:1rem;
+        background-color: sandybrown;
+        border-color:sandybrown;
+
+        &:hover {
+            background-color: #f2c564;
+            border-color:#f2c564;
+            cursor:pointer;
+        }
+    }
+}
