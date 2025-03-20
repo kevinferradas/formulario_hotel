@@ -11,52 +11,29 @@ nombreForm.addEventListener("change", () => {
     errorNombre.textContent = ""
     if (nombreRevisado.length < 2) {        
         errorNombre.textContent = "El nombre debe tener al menos dos caracteres"
-        nombreForm.focus() // retiene el cursor en el input (una vez)
+        nombreForm.focus() // impi
     }
 })
 
+
+
 // Control de la fecha
-let today = new Date()
-let tomorrow = new Date(today)
-tomorrow.setDate(tomorrow.getDate() + 1)
-today = today.toISOString().split('T')[0]
-// console.log(today);
-tomorrow = tomorrow.toISOString().split('T')[0]
 
-let entrada = document.querySelector('#entrada')
-entrada.setAttribute("min",today)
-entrada.setAttribute("value",today)
 
-let salida = document.querySelector('#salida')
-salida.setAttribute("min",tomorrow)
-salida.setAttribute("value",tomorrow)
-
-entrada.addEventListener('change', () => {
-    salida = new Date(entrada.value)
-    salida.setDate(salida.getDate() + 1)
-    salida = salida.toISOString().split('T')[0]
-
-    let fechaSalida = document.querySelector("#salida")
-    fechaSalida.setAttribute("min", salida)
-    fechaSalida.setAttribute("value", salida)
-})
- 
 
 
 // Ventana emergente
 
 const dialog = document.querySelector('#resumen')
-const cierraVentana = document.querySelector('#cierraVentana')
+// const cierraVentana = document.querySelector('#cierraVentana')
 
-cierraVentana.addEventListener('click', () => {
-    dialog.close()
-})
-
+// cierraVentana.addEventListener('click', () => {
+//     dialog.close()
+// })
 
 // Obtener los datos del formulario
 
 //lo que se coloca dentro de los corchetes es el name ( en este caso, formReserva)
-
 const formReserva = document.forms['formReserva']
 
 formReserva.addEventListener('submit', (e) => {
@@ -72,6 +49,9 @@ formReserva.addEventListener('submit', (e) => {
 
     textoResumen.innerHTML = resumenReserva
 
+    // Muestra el <dialog> en modo modal, lo que bloquea la interacción con el resto de la página hasta que se cierre.
     dialog.showModal()
-    formReserva.reset()
+    // dialog.show()--> Muestra el <dialog>, pero permite que el usuario interactúe con el resto de la página.
+
+    
 })
